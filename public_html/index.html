@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <link rel="stylesheet" type="text/css" href="httpjson.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+        <!--<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-route.js"></script>-->
+    </head>
+    
+    <body ng-app="myapp">
+        
+        <div class="main" ng-controller="main">
+            <div class="secondary">
+                <input type="text" ng-model="search.name">
+                <input type="button" value="Search">
+            </div>
+            
+            <div class="ternary">
+                <div class="empbox" ng-repeat="x in result | filter:search" ng-style='callcolor(x.gender)'>
+                    <h2>{{x.name}}</h2>
+                    <p>City : {{x.city}}</p>
+                    <p>Email : {{x.email}}</p>
+                </div>
+            </div>
+        </div>
+        
+        <script src="httpjson.js"></script>
+    </body>
+</html>

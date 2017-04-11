@@ -1,0 +1,8 @@
+{
+    "name": "httpjson",
+    "version": "1.0.0",
+    "keywords": ["util", "functional", "server", "client", "browser"],
+    "author": "r_v21",
+    "contributors": [],
+    "dependencies": {}
+}
